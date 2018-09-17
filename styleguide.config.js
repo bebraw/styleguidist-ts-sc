@@ -4,9 +4,13 @@ const tsDocgen = require('@bebraw/react-docgen-typescript').withCustomConfig('./
 
 module.exports = {
     propsParser(filePath, source, resolver, handlers) {
-        const parser = path.extname(filePath).startsWith('.ts') ? tsDocgen : reactDocgen
+        const isTS = path.extname(filePath).startsWith('.ts')
+        const parser = isTS ? tsDocgen : reactDocgen
+        const result = parser.parse(source, resolver, handlers)
 
-        return parser.parse(source, resolver, handlers)
+        isTS && console.log(filePath, result)
+
+        return result
     },
     components: 'src/components/**/*.{js,jsx,ts,tsx}',
     webpackConfig: require('./config/webpack.config.dev.js')
