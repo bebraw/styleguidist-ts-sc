@@ -12,6 +12,8 @@ module.exports = {
 
         return result
     },
+    // Is the resolver really needed?
+    resolver: reactDocgen.resolver.findAllComponentDefinitions,
     components: 'src/components/**/*.{js,jsx,ts,tsx}',
     webpackConfig: require('./config/webpack.config.dev.js')
 };
