@@ -8,7 +8,7 @@ module.exports = {
 
         const result = isTS ? tsDocgen.parse(filePath, resolver, handlers) : reactDocgen.parse(source, resolver, handlers)
 
-        !isTS && console.log(filePath, result)
+        isTS && console.log(filePath, result[0].displayName)
 
         return result
     },
