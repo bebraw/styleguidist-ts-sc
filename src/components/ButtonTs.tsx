@@ -1,3 +1,3 @@
 import React from 'react'
 
-export default ({ children }) => <button>{children}</button>
+export default ({ children }: { children: JSX.Element[] | JSX.Element }) => <button>{children}</button>
