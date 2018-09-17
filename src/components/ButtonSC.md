@@ -1,5 +1,6 @@
 A simple button.
 
 ```jsx
-<ButtonSC>demo</ButtonSC>
+const ButtonSC = require('./ButtonSC').default
+;<ButtonSC>demo</ButtonSC>
 ```
