@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "baseUrl": "src",
+      "jsx": "react",
+      "lib": ["es5", "es2015", "es6", "dom"],
+      "noUnusedLocals": true,
+      "outDir": "./build/",
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "strictNullChecks": true,
+      "target": "es5"
+    },
+    "include": ["./src/**/*"]
+  }
+  
