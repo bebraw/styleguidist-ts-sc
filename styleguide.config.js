@@ -6,7 +6,14 @@ module.exports = {
     propsParser(filePath, source, resolver, handlers) {
         const isTS = path.extname(filePath).startsWith('.ts')
 
-        return isTS ? tsDocgen.parse(filePath, resolver, handlers) : reactDocgen.parse(source, resolver, handlers)
+        const result = isTS ? tsDocgen.parse(filePath, resolver, handlers) : reactDocgen.parse(source, resolver, handlers)
+
+        !isTS && console.log(filePath, result)
+
+        return result
+    },
+    styleguideComponents: {
+        Wrapper: path.join(__dirname, 'src/ThemeWrapper'),
     },
     // Is the resolver really needed?
     resolver: reactDocgen.resolver.findAllComponentDefinitions,
