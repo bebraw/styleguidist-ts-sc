@@ -612,6 +612,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@bebraw/react-docgen-typescript@^1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@bebraw/react-docgen-typescript/-/react-docgen-typescript-1.8.1.tgz#775b9687c4e69630d1851baad005d46da1e6021d"
+
 "@types/node@*":
   version "10.10.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.10.0.tgz#2b08a1a7d1fa317173a776c2130bf240545cc33e"
@@ -6416,10 +6420,6 @@ react-docgen-displayname-handler@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-docgen-displayname-handler/-/react-docgen-displayname-handler-2.1.1.tgz#a7863a2cc0058ac3c72e6348fa5e40cc4278c5ae"
   dependencies:
     ast-types "0.11.5"
-
-react-docgen-typescript@^1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-1.8.1.tgz#045882aef7b77e629f575bdf0cd94ebeeda0c8a6"
 
 react-docgen@3.0.0-beta12:
   version "3.0.0-beta12"
