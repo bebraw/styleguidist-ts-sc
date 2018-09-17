@@ -5,12 +5,8 @@ const tsDocgen = require('@bebraw/react-docgen-typescript').withCustomConfig('./
 module.exports = {
     propsParser(filePath, source, resolver, handlers) {
         const isTS = path.extname(filePath).startsWith('.ts')
-        const parser = isTS ? tsDocgen : reactDocgen
-        const result = parser.parse(source, resolver, handlers)
 
-        isTS && console.log(filePath, result)
-
-        return result
+        return isTS ? tsDocgen.parse(filePath, resolver, handlers) : reactDocgen.parse(source, resolver, handlers)
     },
     // Is the resolver really needed?
     resolver: reactDocgen.resolver.findAllComponentDefinitions,
