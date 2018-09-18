@@ -1,16 +1,15 @@
-describe('Styleguide', function() {
-  it('loads without warnings or errors', function() {
-    cy.window().then(win => {
-      const errorSpy = cy.spy(win.console, 'error')
-      const warningSpy = cy.spy(win.console, 'warn')
-
-      // TODO: Likely we want to capture errors here instead
-      cy.visit('/', {
-        onLoad() {
-          expect(errorSpy).to.not.be.called
-          expect(warningSpy).to.not.be.called
-        },
+beforeEach(() => {
+  cy.visit('/', {
+    onBeforeLoad(win) {
+      cy.stub(win.console, 'error').callsFake((message) => {
+        console.log(`console.error called with ${message}`)
+        throw new Error(message)
       })
-    })
+    },
+  })
+})
+describe('Styleguide', function() {
+  it('loads', function() {
+    cy.contains('A simple button.')
   })
 })
