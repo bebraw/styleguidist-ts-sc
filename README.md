@@ -3,3 +3,6 @@
 1. `yarn install`
 2. `yarn run styleguide:watch`
 
+## Cypress
+
+`yarn run test:styleguide`
