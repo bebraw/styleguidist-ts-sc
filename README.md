@@ -6,3 +6,6 @@
 ## Cypress
 
 `yarn run test:styleguide`
+
+The Cypress setup disallows any warnings/errors from React (captures proptype warnings!).
+
