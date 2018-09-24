@@ -612,10 +612,6 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@bebraw/react-docgen-typescript@^1.8.2":
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/@bebraw/react-docgen-typescript/-/react-docgen-typescript-1.8.2.tgz#5c84e7a3bd7d8bd0e680f7436272134b138f8182"
-
 "@cypress/listr-verbose-renderer@0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@cypress/listr-verbose-renderer/-/listr-verbose-renderer-0.4.1.tgz#a77492f4b11dcc7c446a34b3e28721afd33c642a"
@@ -6854,6 +6850,10 @@ react-docgen-displayname-handler@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-docgen-displayname-handler/-/react-docgen-displayname-handler-2.1.1.tgz#a7863a2cc0058ac3c72e6348fa5e40cc4278c5ae"
   dependencies:
     ast-types "0.11.5"
+
+react-docgen-typescript@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-1.9.1.tgz#d1739a68ab192e9c6f7028fc969ad1891c302079"
 
 react-docgen@3.0.0-beta12:
   version "3.0.0-beta12"

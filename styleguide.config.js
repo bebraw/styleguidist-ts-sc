@@ -1,6 +1,9 @@
 const path = require('path')
 const reactDocgen = require('react-docgen')
-const tsDocgen = require('@bebraw/react-docgen-typescript').withDefaultConfig()
+const reactDocgenTS = require('react-docgen-typescript')
+const tsDocgen = reactDocgenTS.withDefaultConfig({
+    componentNameResolver: (exp, source) => exp.getName() === 'StyledComponentClass' && reactDocgenTS.getDefaultExportForFile(source)
+})
 
 module.exports = {
     propsParser(filePath, source, resolver, handlers) {
